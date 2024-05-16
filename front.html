@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_page</title>
+    <link rel="stylesheet" href="front.css">
+    
+    <link rel="stylesheet" href="frontmediaqueries.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body><div id="container">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Word Counter</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="randomword.html" class="nav-icons" style="color: #EC53B0;">Word<br>Generator</a></li>
+                        <li><a href="plagiarism1.html" class="nav-icons" style="color: #EC53B0;">Plagiarism</a></li>
+                        <li><a href="contactpage.html" class="nav-icons" style="color: #EC53B0;">Contact Us</a></li>
+                        <li><a href="feedback.html" class="nav-icons" style="color: #EC53B0;">Feedback</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: #EC53B0;">
+                              More Tools
+                            </a>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="front.html">Word Counter</a>
+                              <br>
+                              <a class="dropdown-item" href="plagiarism1.html">Plagiarism</a>
+                              <br>
+                              <a class="dropdown-item" href="faqs.html">FAQ</a>
+                              <br>
+                            </div>
+                          </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <button class ="btn btn-primary" data-target="#mymodel"
+    data-toggle="modal">signup</button>
+    <div class="modal" id="mymodel">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h3 class="text-center text-primary">Sign Up</h3>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label><i class="fa fa-user fa-2x"></i> Username:</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa fa-lock fa-2x"></i> Password:</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa fa-envelope fa-2x"></i> Email:</label>
+                        <input type="text" name="" class="form-control">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button class="btn btn-primary" data-dismiss="modal">Signup</button></div></div>
+            </div>
+        </div>
+    </div>
+                    </ul>
+                </div>
+                <a href="#" class="nav-toggle hover-link"><i class="fa-regular fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="container_1">
+
+            <div class="cube_container">
+                <div class="cube">
+                    <div class="face front">W</div>
+                    <div class="face back">W</div>
+                    <div class="face left">W</div>
+                    <div class="face right">W</div>
+                    <div class="face top">W</div>
+                    <div class="face bottom">W</div>
+                </div>
+            </div>
+
+<br><br>
+        <div id="quote"> Word Counter :Fast And Easy </div>
+        <p id="para">Free Online Character And Word Counter</p><br>
+       <div class="icons">
+       WORD COUNT...
+       
+    </div>
+     <div class="textarea"><form>
+        <textarea name="" id="TextArea" cols="91" rows="30"  ></textarea>  </div>
+        
+    </form>
+    <div class="count">
+        <div class="box_1">
+           <p>Characters</p>
+            <h5 id="characters">0</h5>
+            </div>
+    
+                 <div class="box_2">
+                    <p>Words</p>
+                     <h5 id="words">0</h5>
+                     </div>
+    
+                     <div class="box_3">
+                        <p>Sentences</p>
+                         <h5 id="sentences">0</h5>
+                         </div>
+    
+                         <div class="box_4">
+                            <p>Paragraphs</p>
+                             <h5 id="paragraphs">0</h5>
+                             </div>
+      
+
+                             <script>
+                                let TextArea = document.getElementById("TextArea");
+                                let  characters= document.getElementById("characters");
+                                let words = document.getElementById("words");
+                                let sentences = document.getElementById("sentences");
+                                let  paragraph= document.getElementById("paragraph");
+                        
+                        
+                                TextArea.addEventListener("input", () =>{
+                        
+                                    characters.textContent = TextArea.value.length;
+                                    let text = TextArea.value.trim();
+                        
+                                    words.textContent = text.split(/\s+/).filter((item)=>
+                                    item).length;
+                        
+                                    sentences.textContent =text.split(/[.|!|?]+/g).
+                                    length-1;
+                        
+                                    paragraphs.textContent = text.replace(/\$/gm, '').
+                                    split(/\n/).length;
+                                });
+                            </script>
+
+<div class="questions">
+   <div><h2 id="h">Why Does Word Count Matter?</h2>
+<p id="para1">Word count is dependent on the requirements of the project you're working on. Some projects
+require a short text, while some require lengthy content. Whichever the project, it's important that you 
+adhere to the words needed without using less or exceeding the amount.
+</p>
+
+
+
+<h2  id="h">Keeps Readers Engaged</h2>
+<p id="para1">A good writer knows how to keep their readers engaged. Most readers visit a page to see if 
+    they can get the information they need. If the post is not engaging or interesting, they bounce off to find a more engaging piece.
+
+A high bounce rate can significantly lower your rankings since Google rates your website based on how much time readers spend on it. So, to keep your posts engaging, be sure to use easy-to-read words, avoid the fluff and write a longer post with all the relevant information needed.</p>
+
+
+<h2 id="h" > It Makes You a More Disciplined Writer</h2>
+<p id="para1">As you grow your writing career, you'll realize that word count is very important, especially
+ in digital marketing. At first, it might be very hard to maintain the limit of words given. But with time,
+ using the word count tool helps you become disciplined as you adhere to the set requirements.</p></div>
+<div id="heading"><h2 id="h" >How Does the Word Count Tool Work?</h2>
+<p id="para1">Using the word count tool is very easy. You only need to follow a few steps to get it right.
+ First, copy your text and paste it into the toolbox. Then, hit the count word button, and within a few
+seconds, your word count gets displayed.
+
+The word count tool helps you know the exact number of words, sentences, characters and paragraphs used.
+You can use it to calculate words in Microsoft Excel, PDF files and Google Docs, among more. Even better,
+its a free word counter with no limit to how many times you can use it.</p></div>
+
+
+<h2 id="h" >Why Should You Use a Word Counter?</h2>
+<p id="para1">Though you can use software such as Google Docs and Microsoft Word to count the number of
+words or characters in your text, it's best that you use a word counter tool. A word counter is not
+limited to a particular file format. You can use it for Instagram captions, Facebook posts and Microsoft
+Excel sheets, among other formats.</p>
+</div><br><br>
+<h1 id="font">More writing Tools</h1><div class="div1">
+   <div id="wordsperpage"><figure><img src="C:\Users\mehak\Downloads\words per page.jpeg" height="220px" width="300px"><br><br>
+   <figcaption>Writing a book? Need to know how <br>smany words you'll need for 200 pages.</figcaption></figure>
+   </div>
+   <div id="webpagewordcount"><figure><img src="C:\Users\mehak\Downloads\webpage word count.png" height="220px" width="300px"><br><br>
+   <figcaption>Easily calculate the number of words<br> and word density of any webpage.</figcaption></figure>
+    </div>
+    <div id="capitalizesentences"><figure><img src="C:\Users\mehak\Downloads\capitialize sentence.jpg" height="220px" width="300px"><br><br>
+     <figcaption>Capitalize the first word<br> in your sentences automatically.</figcaption></figure>
+     </div><br><br><br><br>
+   
+   
+     <div id="randomword"><figure><img src= "C:\Users\mehak\Downloads\random word.jpg"height="230px" width="300px"><br><br>
+        <figcaption>Generate random words for use in a<br> story to get the creative juices flowing.</figcaption></figure>
+        </div>
+        <div id="grammarchecker"><figure><img src= "C:\Users\mehak\Downloads\grammar checker.jpg"  height="250px" width="310px"><br><br>
+            <figcaption>Check grammar, spelling, word choice</figcaption></figure>
+            </div>
+            <div id="charactercount"><figure><img src= "C:\Users\mehak\Downloads\character.jpg"height="230px" width="300px"><br><br>
+                <figcaption>Go back to the basics and <br>just count characters and words.</figcaption></figure>
+                </div></div><br><br><br><br>
+                <footer>
+                <div id="footer"> 
+                    <div class="f1">
+                        <p id="f">Iwriter</p>
+                       <p1> IWriter is the fastest, easiest andway to<br> have contentwritten for your website. <br>
+                       writers from across the globe will have<br>
+                         instant access to write the content quickly .</p1>
+                    </div>
+                                   <div id="f2">
+                                    <p id="f">Quick Links</p>
+                                    <a href ="contactpage.html">Contact Us</a><br>
+                                    <a href="faqs.html">FAQs</a><br>         
+                                    <a href="login.html">login</a><br>
+                                    <a href="plagiarism1.html"> plagiarism</a><br>
+                                 
+                                </div>
+                    <div id="f3">
+                    <p id="f">Contact</p>
+                    <p1>Questions?<br>
+                    phone<br>
+                    office hours<br>
+                    weekdays-9:00 to 5:00 pm</p1>
+                    </div>  <br><br><br>
+                    <div class="image">
+                    <img src="C:\Users\mehak\Downloads\FEE project\youtube.jpg" alt="youtube" >
+                    <img src="C:\Users\mehak\Downloads\FEE project\linkedin.jpg" alt="Instagram">
+                   <img src="C:\Users\mehak\Downloads\FEE project\facebook.jpg" alt="linkedin"> 
+                  </div>
+
+                    
+                </footer>
+            </div>
+            
+    </body>
+</html>

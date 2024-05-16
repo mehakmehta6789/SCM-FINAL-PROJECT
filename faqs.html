@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="faqs.css">
+    <link rel="stylesheet" href="carousels.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Word Counter</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="randomword.html" class="nav-icons" style="color: #EC53B0;">Word<br>Generator</a></li>
+                        <li><a href="plagiarism1.html" class="nav-icons" style="color: #EC53B0;">Plagiarism</a></li>
+                        <li><a href="contactpage.html" class="nav-icons" style="color: #EC53B0;">Contact Us</a></li>
+                        <li><a href="feedback.html" class="nav-icons" style="color: #EC53B0;">Feedback</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"
+                                style="color: #EC53B0;">
+                                More Tools
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="front.html">Word Counter</a>
+                                <br>
+                                <a class="dropdown-item" href="plagiarism.html">Plagiarism</a>
+                                <br>
+                                <a class="dropdown-item" href="faqs.html">FAQ</a>
+                                <br>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                      
+                        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <button class ="btn btn-success" data-target="#mymodel"
+                        data-toggle="modal">signup</button>
+                        <div class="modal" id="mymodel">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" >
+                                <div class="modal-header">
+                                    <h3 class="text-center text-primary">Sign Up</h3>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label><i class="fa fa-user fa-2x"></i> Username:</label>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label><i class="fa fa-lock fa-2x"></i> Password:</label>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label><i class="fa fa-envelope fa-2x"></i> Email:</label>
+                                            <input type="text" name="" class="form-control">
+                                        </div>
+                                    </form>
+                    
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button class="btn btn-danger" data-dismiss="modal">Signup</button></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="container_FAQ">
+            <div class="FAQ_box_1 FAQ_boxes">
+                <span id="mainheader">FAQ</span>
+                <h2 id="mainheader_title">
+                    Common Questions
+                </h2>
+                <p id="FAQ-para">
+                    Answers to frequently asked questions regarding word count, page count and more. <br>
+                    Learn how to calculate words per page and how many pages commonly requested word <br>
+                    counts produce with examples.
+                </p>
+            </div>
+            <div class="FAQ_box_2 FAQ_boxes">
+                <span id="heading_wordcounter">Word Counter</span>
+                <span id="para_wordcounter">
+                    use our free and easy online tool for counting<br>
+                    characters,words,sentences,paragraphs and<br>
+                    pages in real time, along with keyword density<br>
+                    and reading level.<br>
+                </span><br>
+                <span><button id="button_1">Try It Now </button></span>
+            </div>
+        </div>
+        <hr>
+        <div id="container_table">
+            <h3 id="table_title">How many pages is...</h3>
+            <div id="main_table_box">
+                <table style="width: 100%;">
+                    <thead>
+                        <tr style="height: 100px;">
+                            <th>
+                                Word Count
+                            </th>
+                            <th>
+                                Pages(single spaced)
+                            </th>
+                            <th>
+                                Pages(double spaced)
+                            </th>
+                            <th>
+                                Font Size
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="height: 60px;">
+                            <td>250</td>
+                            <td>1/2</td>
+                            <td>1</td>
+                            <td>12</td>
+
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>300</td>
+                            <td>2/3</td>
+                            <td>1<sup>1/3</sup></td>
+                            <td>12</td>
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>400</td>
+                            <td>4/5</td>
+                            <td>1<sup>3/5</sup></td>
+                            <td>12</td>
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>500</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>12</td>
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>600</td>
+                            <td>1<sup>1/3</sup></td>
+                            <td>2<sup>2/3</sup></td>
+                            <td>12</td>
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>750</td>
+                            <td>1<sup>1/2</sup></td>
+                            <td>3</td>
+                            <td>12</td>
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>800</td>
+                            <td>1<sup>3/5</sup></td>
+                            <td>3<sup>1/5</sup></td>
+                            <td>12</td>
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>1000</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>12</td>
+                        </tr>
+                        <tr style="height: 60px;">
+                            <td>1200</td>
+                            <td>2<sup>2/5</sup></td>
+                            <td>4<sup>4/5</sup></td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="accordion" id="question-accordion">
+            <div class="card">
+                <div class="card-header bg-danger text-white" data-toggle="collapse" data-target="#question-1">
+                    <h3 class="questions">How to find word count using word counter tool?</h3>
+                </div>
+                <div class="collapse" id="question-1" data-parent="#question-accordion">
+                    <div class="card-body">
+                        <p class="lead">Simply type your text into the blank field; the total number of words will
+                            increase
+                            as you type. Otherwise, simply copy the text and paste it into the empty space; the total
+                            number
+                            of words will be displayed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-success text-white" data-toggle="collapse" data-target="#question-2">
+                    <h3 class="questions">How to find the Character Count using the Character Count tool? </h3>
+                </div>
+                <div class="collapse" id="question-2" data-parent="#question-accordion">
+                    <div class="card-body">
+                        <p class="lead">Type your text into the space, and the character count will be updated as you
+                            type.
+                            Alternatively, copy and paste your text into the space, and your character count will be
+                            provided. </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header bg-danger text-white" data-toggle="collapse" data-target="#question-3">
+                    <h3 class="questions">What is the word count for 1 page? </h3>
+                </div>
+                <div class="collapse" id="question-3" data-parent="#question-accordion">
+                    <div class="card-body">
+                        <p class="lead"> A good estimate of the word count for font size 12 pt and single spaced in 1
+                            page is 500 words. </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header bg-success text-white" data-toggle="collapse" data-target="#question-4">
+                    <h3 class="questions">How you should increase your word count? </h3>
+                </div>
+                <div class="collapse" id="question-4" data-parent="#question-accordion">
+                    <div class="card-body">
+                        <p class="lead"> Add examples in your points or explain your points more elaborately are quick
+                            ways to
+                            increase your word count. </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header bg-danger text-white" data-toggle="collapse" data-target="#question-5">
+                    <h3 class="questions">How you should reduce your word count? </h3>
+                </div>
+                <div class="collapse" id="question-5" data-parent="#question-accordion">
+                    <div class="card-body">
+                        <p class="lead"> Use active voice instead of passive voice in your sentences, eliminate
+                            unnecessary
+                            words are quick ways to reduce your word count. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success text-white" data-toggle="collapse" data-target="#question-6">
+                    <h3 class="questions">How do you count words in essay?</h3>
+                </div>
+                <div class="collapse" id="question-6" data-parent="#question-accordion">
+                    <div class="card-body">
+                        <p class="lead">Simply copy and paste your essay into our word counter tool,
+                            and you will get the word count for your essay. </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="C:\Users\mehak\Downloads\wrdctr1.jpg" alt="Los Angeles" height="100%" width="100%">
+          </div>
+      
+          <div class="item">
+            <img src="C:\Users\mehak\Downloads\wrdctr2.jpg" alt="Chicago" height="100%" width="100%">
+          </div>
+      
+          <div class="item">
+            <img src="C:\Users\mehak\Downloads\wrdctr3.jpg" alt="New York" height="100%" width="100%">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <br>
+      <br>
+      
+    <footer>
+        <div id="footer"> 
+            <div class="f1">
+                <p id="f">Iwriter</p>
+               <p1> IWriter is the fastest, easiest andway to<br> have contentwritten for your website. <br>
+               writers from across the globe will have<br>
+                 instant access to write the content quickly .</p1>
+            </div>
+                           <div id="f2">
+                            <p id="f">Quick Links</p>
+                            <a href ="contactpage.html">Contact Us</a><br>
+                            <a href="faqs.html">FAQs</a><br>         
+                            <a href="login.html">login</a><br>
+                            <a href="plagiarism1.html"> plagiarism</a>
+                        </div>
+            <div id="f3">
+            <p id="f">Contact</p>
+            <p1>Questions?<br>
+            phone<br>
+            office hours<br>
+            weekdays-9:00 to 5:00 pm</p1>
+            </div>  
+            <br>
+            <div class="image">
+                <img src="C:\Users\mehak\Downloads\FEE project\youtube.jpg" alt="youtube" >
+                <img src="C:\Users\mehak\Downloads\FEE project\linkedin.jpg" alt="Instagram">
+               <img src="C:\Users\mehak\Downloads\FEE project\facebook.jpg" alt="linkedin"> 
+              </div>
+    </footer>
+</body>
+</html>
